@@ -7,12 +7,16 @@ define a similarity threshold to allow users to halt algorithm [we'll define thi
 4. Randomly pull a user (RU) from the same cluster as them and hand the info over to their client-side code
 While(conditions == False):
   if (NU is more similar to RU than one of RU's existing connections):
-    conditions = True
-    Stop algorithm for this client
-  else if (NU is less similar to RU than any existing connections but RU has less than 5 connections):
-    conditions = True
-    Stop algorithm for this client
-  else if (NU is less similar to RU than any existing connections and RU has more than 5 connections):
-    conditions = False
+    NU.connections += 1
     RU = RU's connection that NU had the highest similarity to
-   
+  else if (NU is less similar to RU than any existing connections but RU has less than 5 connections):
+    NU.connections += 1
+    RU.connections += 1
+    RU = RU's connection that NU had the highest similarity to
+  else if (NU is less similar to RU than any existing connections and RU has more than 5 connections):
+    RU = RU's connection that NU had the highest similarity to
+  if (NU.connections = 5):
+    conditions = True
+    stop algorithm for client
+
+Users purged from the existing connection with RU will be called disconnected users. Disconnected User will call this algorithm until conditions=True.
