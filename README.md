@@ -9,20 +9,20 @@ DU = Disconnected User
 - Cluster them off of this basic info using kmeans to receive their cluster.
 - Randomly pull a user (RU) from the same cluster as them and hand the info over to their client-side code <br>
 While(conditions == False):<br>
--if (NU is more similar to RU than one of RU's existing connections):<br>
---NU.connections += 1<br>
---RU = RU's connection that NU had the highest similarity to<br>
---DU.connections -= 1<br>
---DU calls this algorithm until conditions are satisfied.<br>
--else if (NU is less similar to RU than any existing connections but RU has less than 5 connections):<br>
---NU.connections += 1<br>
---RU.connections += 1<br>
---RU = RU's connection that NU had the highest similarity to<br>
--else if (NU is less similar to RU than any existing connections and RU has more than 5 connections):<br>
---RU = RU's connection that NU had the highest similarity to<br>
--if (NU.connections = 5):<br>
---conditions = True<br>
---stop algorithm for client<br>
+=if (NU is more similar to RU than one of RU's existing connections):<br>
+~~NU.connections += 1<br>
+~~RU = RU's connection that NU had the highest similarity to<br>
+~~DU.connections -= 1<br>
+~~DU calls this algorithm until conditions are satisfied.<br>
+=else if (NU is less similar to RU than any existing connections but RU has less than 5 connections):<br>
+~~NU.connections += 1<br>
+~~RU.connections += 1<br>
+~~RU = RU's connection that NU had the highest similarity to<br>
+=else if (NU is less similar to RU than any existing connections and RU has more than 5 connections):<br>
+~~RU = RU's connection that NU had the highest similarity to<br>
+=if (NU.connections = 5):<br>
+~~conditions = True<br>
+~~stop algorithm for client<br>
 
 <br><br><br>
 Potential solutions to current issues:<br>
