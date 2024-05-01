@@ -36,9 +36,8 @@ While conditions are False:
   if NU.connections == 5:
     - conditions = True
     - Stop algorithm for client
+```
 
-
-<br><br><br>
 Potential solutions to current issues:<br>
 Issue: Network volatility due to users continuously getting purged from the network because of similarity contraints. <br>
 Solution: People can be connected to people who aren't connected to them. This prevents constant reorganizing of the network. Once a user has found their five connections they are set in stone (best to put a minimum threshold of similarity between the two) <br>
