@@ -41,6 +41,9 @@ While conditions are False:
 **Potential solutions to current issues:**
 - Issue: Network volatility due to users continuously getting purged from the network because of similarity contraints. <br>
 - Solution: People can be connected to people who aren't connected to them. This prevents constant reorganizing of the network. Once a user has found their five connections they are set in stone (best to put a minimum threshold of similarity between the two) <br>
-<br>
 - Issue: The network will get stale after a while.<br>
 - Solution: Have the users run this algorithm once a week in order to get setup with new users with new data, though this whole algorithm could cause users to inadvertantly converge towards each other but we'll see. <br>
+
+**Potential Applications:**
+- Decentralized social network that allows users to see new content they haven't seen before while not having the overall structure of the network they live in be controlled by anyone with access to the server.
+- p2p recommendation systems that lowers server costs for corporations by leveraging the user's computing resources.
