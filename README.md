@@ -13,8 +13,8 @@
 
 **Algorithm**:
 1. Gather a descriptive vector about `NU` (interests, job, major, etc.) from their profile.
-2. Cluster `NU` based on this basic info using k-means.
-3. Randomly select a `RU` from the same cluster and pass the info to their client-side code.
+2. Classify `NU` based on this basic info using k-means.
+3. Randomly select a `RU` from the same cluster as `NU` and pass the info to the `NU` client-side code.
 
 **Process**:
 ```plaintext
