@@ -8,8 +8,7 @@ DU = Disconnected User
 - Gather a descriptive vector about a new user (NU) (this could be their interests, job, major, etc that they select when creating a profile on a website)
 - Cluster them off of this basic info using kmeans to receive their cluster.
 - Randomly pull a user (RU) from the same cluster as them and hand the info over to their client-side code <br>
-While(conditions == False):<br>
-<br>
+<br> While(conditions == False):<br>
 =if (NU is more similar to RU than one of RU's existing connections):<br>
 ~~NU.connections += 1<br>
 ~~RU = RU's connection that NU had the highest similarity to<br>
